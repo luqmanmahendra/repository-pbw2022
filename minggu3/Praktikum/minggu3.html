@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Multimedia HTML</title>
+</head>
+<body>
+    <h3>Mengolah Multimedia HTML</h3>
+    <button onclick="playvid()">Play</button>
+    <button onclick="pausevid()">Pause</button>
+    <button onclick="durationvid()" type="button">Video Duration</button>
+    <button onclick="enablecontrols()" type="button">Enable Controls</button>
+    <button onclick="disablecontrols()" type="button">Disable Controls</button>
+    <button onclick="checkcontrols()" type="button">Check Controls</button>
+    <br>
+    
+    <video width="500px" height="450px" id="XYZ"
+        <source src="Party Wizard Party Time (Clash of Clans 7th Anniversary).mp4" type="video/mp4">
+    </video>
+        
+</body>
+<script>
+    var vid = document.getElementById("XYZ");
+        
+        function playvid() {
+            vid.play();
+        }
+        function pausevid() {
+            vid.pause();
+        }
+        function durationvid() {
+            alert(vid.duration);
+        }
+        function enablecontrols() {
+            vid.controls = true;
+            vid.load();
+        }
+        function disablecontrols() {
+            vid.controls = false;
+            vid.load();
+        }
+        function checkcontrols() {
+            alert(vid.controls);
+        }
+</script>
+</html>
